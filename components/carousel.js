@@ -13,11 +13,13 @@ class Carousel extends HTMLElement {
         ${this._content
           .map(
             (slide) => `
-          <div style='background-image: url(${slide.img});' class='slide'>
-            <div class='slide-content'>
-              <pre class='title'>${slide.preTitle}</pre>
-              <pre class='text'>${slide.preText}</pre>
-              <button>${slide.button}</button>
+          <div style='background: url(${slide.img});' class='slide'>
+            <div class='slide-content-wrapper'>
+              <div class='slide-content'>
+                <pre class='title'>${slide.preTitle}</pre>
+                <pre class='text'>${slide.preText}</pre>
+                <button>${slide.button}</button>
+              </div>
             </div>
           </div>
               `
